@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Basket : MonoBehaviour
 {
-    void start() { }
+    public ScoreCounter scoreCounter;
+    void start() {
+        GameObject scoreGO = GameObject.Find("ScoreCounter");
+        scoreCounter = scoreGO.GetComponent<ScoreCounter>();
+    }
 
     void update()
     {
@@ -21,6 +25,7 @@ public class Basket : MonoBehaviour
             if (collidedWith.CompareTag("Apple"))
             {
                 Destroy(collidedWith);
+                scoreCounter.score += 100;
             }
         }
     }

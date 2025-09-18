@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ScoreCounter : MonoBehaviour
 {
@@ -13,6 +14,6 @@ public class ScoreCounter : MonoBehaviour
     }
     void update()
     {
-        uiText.text = score.ToString( "#,0" );
+        uiText.text = score.ToString("#,0");
     }
 }
