@@ -12,7 +12,7 @@ public class ApplePicker : MonoBehaviour
     public float basketSpacingY = 2f;
     public List<GameObject> basketList;
 
-    void start()
+    void Start()
     {
         basketList = new List<GameObject>();
         for (int i = 0; i < numBaskets; i++)

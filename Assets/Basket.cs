@@ -5,12 +5,12 @@ using UnityEngine;
 public class Basket : MonoBehaviour
 {
     public ScoreCounter scoreCounter;
-    void start() {
+    void Start() {
         GameObject scoreGO = GameObject.Find("ScoreCounter");
         scoreCounter = scoreGO.GetComponent<ScoreCounter>();
     }
 
-    void update()
+    void Update()
     {
         Vector3 mousePos2D = Input.mousePosition;
         mousePos2D.z = -Camera.main.transform.position.z;
